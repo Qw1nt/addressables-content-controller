@@ -93,20 +93,14 @@ namespace Runtime.Shared.AddressablesContentController.Extensions
                 case OperationType.Instancing:
 
                     if (handle.IsValid() == true)
-                    {
                         Addressables.ReleaseInstance(handle);
-                        Debug.Log("YES - instance");
-                    }
 
                     break;
 
                 case OperationType.Loading:
 
                     if (handle.IsValid() == true)
-                    {
                         Addressables.Release(handle);
-                        Debug.Log("YES - laoding");
-                    }
 
                     break;
 
