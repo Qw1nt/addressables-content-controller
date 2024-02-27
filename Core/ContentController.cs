@@ -47,15 +47,15 @@ namespace Runtime.Shared.AddressablesContentController.Core
         }
 
         internal static List<ContentController> Instances { get; } = new(DefaultInstancesCapacity);
-
+        
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public async UniTask<ContentOperation<GameObject>> InstantiateAsync(AssetReference assetReference)
         {
-            var operationHandle = assetReference.InstantiateAsync();
-            await operationHandle;
+            var instantiateOperation = assetReference.InstantiateAsync();
+            await instantiateOperation;
 
             var resultOperation = new ContentOperation<GameObject>(assetReference.AssetGUID, OperationType.Instancing,
-                operationHandle);
+                instantiateOperation);
 
             _operationsTracker.Track(resultOperation);
 
@@ -65,13 +65,19 @@ namespace Runtime.Shared.AddressablesContentController.Core
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public async UniTask<ContentOperation<GameObject>> InstantiateAsync(string key)
         {
-            var operation = Addressables.InstantiateAsync(key);
-            await operation;
+            var operationHandle = Addressables.InstantiateAsync(key);
+            await operationHandle;
 
-            var resultOperation = new ContentOperation<GameObject>(key, OperationType.Instancing, operation);
+            var resultOperation = new ContentOperation<GameObject>(key, OperationType.Instancing, operationHandle);
             _operationsTracker.Track(resultOperation);
 
             return resultOperation;
+        }
+
+        public async UniTask<T> InstantiateAsync<T>(AssetReference reference) where T : Component
+        {
+            var instance = await InstantiateAsync(reference);
+            return instance.GetResult().GetComponent<T>();
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]

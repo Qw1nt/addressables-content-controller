@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Runtime.Shared.AddressablesContentController.Common;
 using Runtime.Shared.AddressablesContentController.Extensions;
+using UnityEngine;
 
 namespace Runtime.Shared.AddressablesContentController.Core
 {

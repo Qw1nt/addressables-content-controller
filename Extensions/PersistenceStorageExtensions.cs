@@ -5,6 +5,7 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using Runtime.Shared.AddressablesContentController.Common;
 using Runtime.Shared.AddressablesContentController.Core;
+using UnityEngine;
 
 namespace Runtime.Shared.AddressablesContentController.Extensions
 {
