@@ -1,6 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 
-namespace Runtime.Shared.AddressablesContentController.SceneManagement
+namespace Qw1nt.Runtime.Shared.AddressablesContentController.SceneManagement
 {
     public abstract class SceneManipulatorBase<TPreloader> where TPreloader : IScenePreloader
     {

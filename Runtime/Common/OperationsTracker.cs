@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Runtime.Shared.AddressablesContentController.Extensions;
-using Runtime.Shared.AddressablesContentController.Interfaces;
+using Qw1nt.Runtime.AddressablesContentController.Extensions;
+using Qw1nt.Runtime.Shared.AddressablesContentController.Interfaces;
 
-namespace Runtime.Shared.AddressablesContentController.Common
+namespace Qw1nt.Runtime.AddressablesContentController.Common
 {
     public class OperationsTracker : IOperationsTracker
     {

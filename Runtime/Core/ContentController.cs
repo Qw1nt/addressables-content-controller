@@ -1,15 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
-using Runtime.Shared.AddressablesContentController.Common;
-using Runtime.Shared.AddressablesContentController.Extensions;
-using Runtime.Shared.AddressablesContentController.Interfaces;
-using Runtime.Shared.AddressablesContentController.SceneManagement;
+using Qw1nt.Runtime.AddressablesContentController.Common;
+using Qw1nt.Runtime.AddressablesContentController.Extensions;
+using Qw1nt.Runtime.Shared.AddressablesContentController.Interfaces;
+using Qw1nt.Runtime.Shared.AddressablesContentController.SceneManagement;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.ResourceProviders;
 
-namespace Runtime.Shared.AddressablesContentController.Core
+namespace Qw1nt.Runtime.AddressablesContentController.Core
 {
     public sealed class ContentController
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceProviders;
 
-namespace Runtime.Shared.AddressablesContentController.SceneManagement
+namespace Qw1nt.Runtime.Shared.AddressablesContentController.SceneManagement
 {
     public readonly struct PreloadSceneOperation : IEqualityComparer<PreloadSceneOperation>
     {

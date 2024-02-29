@@ -2,7 +2,7 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
-namespace Runtime.Shared.AddressablesContentController.Common
+namespace Qw1nt.Runtime.AddressablesContentController.Common
 {
     public struct OperationObserver
     {

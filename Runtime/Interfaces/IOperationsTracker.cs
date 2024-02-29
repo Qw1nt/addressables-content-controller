@@ -1,6 +1,6 @@
-﻿using Runtime.Shared.AddressablesContentController.Common;
+﻿using Qw1nt.Runtime.AddressablesContentController.Common;
 
-namespace Runtime.Shared.AddressablesContentController.Interfaces
+namespace Qw1nt.Runtime.Shared.AddressablesContentController.Interfaces
 {
     public interface IOperationsTracker
     {

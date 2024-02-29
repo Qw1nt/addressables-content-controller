@@ -2,11 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using Runtime.Shared.AddressablesContentController.Common;
-using Runtime.Shared.AddressablesContentController.Extensions;
-using UnityEngine;
+using Qw1nt.Runtime.AddressablesContentController.Common;
+using Qw1nt.Runtime.AddressablesContentController.Extensions;
 
-namespace Runtime.Shared.AddressablesContentController.Core
+namespace Qw1nt.Runtime.AddressablesContentController.Core
 {
     internal class PersistenceStorage
     {

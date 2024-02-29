@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
-using Runtime.Shared.AddressablesContentController.Common;
-using Runtime.Shared.AddressablesContentController.Core;
-using Runtime.Shared.AddressablesContentController.Interfaces;
+using Qw1nt.Runtime.AddressablesContentController.Common;
+using Qw1nt.Runtime.Shared.AddressablesContentController.Interfaces;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceProviders;
 
-namespace Runtime.Shared.AddressablesContentController.SceneManagement
+namespace Qw1nt.Runtime.Shared.AddressablesContentController.SceneManagement
 {
     public interface IScenePreloader : IDisposable
     {

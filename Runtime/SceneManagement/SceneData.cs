@@ -2,7 +2,7 @@
 using UnityEngine.AddressableAssets;
 using UnityEngine.SceneManagement;
 
-namespace Runtime.Shared.AddressablesContentController.SceneManagement
+namespace Qw1nt.Runtime.Shared.AddressablesContentController.SceneManagement
 {
     [CreateAssetMenu(menuName = "Content Controller/Scene Data")]
     public class SceneData : ScriptableObject

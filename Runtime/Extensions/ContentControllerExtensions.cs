@@ -1,17 +1,16 @@
 ﻿using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
-using Runtime.Shared.AddressablesContentController.Common;
-using Runtime.Shared.AddressablesContentController.Core;
+using Qw1nt.Runtime.AddressablesContentController.Common;
+using Qw1nt.Runtime.AddressablesContentController.Core;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
-using VContainer.Unity;
 
 #if CONTENT_CONTROLLER_VCONTAINER
 using VContainer;
 #endif
 
-namespace Runtime.Shared.AddressablesContentController.Extensions
+namespace Qw1nt.Runtime.AddressablesContentController.Extensions
 {
     public static class ContentControllerExtensions
     {

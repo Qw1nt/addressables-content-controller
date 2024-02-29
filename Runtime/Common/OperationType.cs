@@ -1,4 +1,4 @@
-﻿namespace Runtime.Shared.AddressablesContentController.Common
+﻿namespace Qw1nt.Runtime.AddressablesContentController.Common
 {
     public enum OperationType
     {

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
-using Runtime.Shared.AddressablesContentController.Common;
-using Runtime.Shared.AddressablesContentController.Core;
-using Runtime.Shared.AddressablesContentController.SceneManagement;
+using Qw1nt.Runtime.AddressablesContentController.Common;
+using Qw1nt.Runtime.AddressablesContentController.Core;
+using Qw1nt.Runtime.Shared.AddressablesContentController.SceneManagement;
 
-namespace Runtime.Shared.AddressablesContentController.Extensions
+namespace Qw1nt.Runtime.AddressablesContentController.Extensions
 {
     public static class OperationObserverExtensions
     {

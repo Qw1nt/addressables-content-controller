@@ -1,21 +1,18 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
-using Runtime.Shared.AddressablesContentController.Common;
-using Runtime.Shared.AddressablesContentController.Core;
-using UnityEngine;
+using Qw1nt.Runtime.AddressablesContentController.Common;
+using Qw1nt.Runtime.AddressablesContentController.Core;
 
-namespace Runtime.Shared.AddressablesContentController.Extensions
+namespace Qw1nt.Runtime.AddressablesContentController.Extensions
 {
-    public static class PersistenceStorageExtensions
+    public static partial class PersistenceStorageExtensions
     {
         public static T GetFromPersistence<T>(this ContentController contentController) where T : class
         {
             return contentController.Persistence.Get<T>();
         }
-        
+
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool TryGetFromPersistence<T>(this ContentController contentController, out T result)
             where T : class
@@ -32,18 +29,6 @@ namespace Runtime.Shared.AddressablesContentController.Extensions
             var has = contentController.Persistence.TryGetSet(out result);
             return has;
         }
-        
-        /*[MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static T GetShared<T>(this ContentController contentController) where T : class
-        {
-            return contentController.Persistence.Get<T>();
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static IList<T> GetSharedSet<T>(this ContentController contentController) where T : class
-        {
-            return contentController.Persistence.GetSet<T>();
-        }*/
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static T MakePersistence<T>(this ContentOperation<T> operation) where T : class
