@@ -10,7 +10,7 @@ namespace Qw1nt.Runtime.AddressablesContentController.Core
 {
     internal class Cache
     {
-        private readonly Dictionary<string, ContentOperation> _operations = new(256);
+        private readonly Dictionary<string, ContentOperation> _operations = new(32);
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public bool Has(AssetReference reference)
@@ -84,6 +84,13 @@ namespace Qw1nt.Runtime.AddressablesContentController.Core
 
             _operations[guid].Release();
             _operations.Remove(guid);
+        }   
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public void Release(string assetKey)
+        {
+            _operations[assetKey].Release();
+            _operations.Remove(assetKey);
         }
     }
 }

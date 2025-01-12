@@ -31,7 +31,7 @@ namespace Qw1nt.Runtime.AddressablesContentController.Core
         public static ContentController Default
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            get => Instances[0];
+            get => Instances != null && Instances.Count > 0 ? Instances[0] : null;
         }
 
         internal Cache Cache
@@ -152,6 +152,15 @@ namespace Qw1nt.Runtime.AddressablesContentController.Core
             return (IReadOnlyList<T>) contentOperation.GetResult();
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public void Release(string key)
+        {
+            if (_cache.Has(key) == false)
+                return;
+
+            _cache.Release(key);
+        }
+        
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void Release(AssetReference reference)
         {
